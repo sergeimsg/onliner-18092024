@@ -1,5 +1,17 @@
 package by.onliner.sergeymelnik;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
 public class HomePage {
-    private static final String BUTTON_LOGIN_XPATH ="//div[@class='auth-bar__item auth-bar__item--text']";
+        WebDriver driver;
+
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void clickButtonLogin(){
+        driver.findElement(By.xpath(HomePageXPath.BUTTON_LOGIN_XPATH))
+                .click();
+    }
 }
