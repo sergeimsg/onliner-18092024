@@ -1,4 +1,4 @@
-package by.onliner.sergeymelnik;
+package by.onliner.sergeymelnik.pageObjects;
 
 public class PageObjectXPath {
     public static final String INPUTE_EMAIL_XPATH = "//input[@placeholder='Ник или e-mail']";

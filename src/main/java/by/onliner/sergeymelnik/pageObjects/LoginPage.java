@@ -1,5 +1,6 @@
-package by.onliner.sergeymelnik;
+package by.onliner.sergeymelnik.pageObjects;
 
+import by.onliner.sergeymelnik.driver.Singletone;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +8,10 @@ import org.openqa.selenium.WebElement;
 public class LoginPage {
 
     WebDriver driver;
+
+    public LoginPage() {
+        this.driver = Singletone.getDriver();
+    }
 
     public void clickButtonEnter() {
         By enterXPath = By.xpath(PageObjectXPath.BUTTON_ENTER_LOGIN);
